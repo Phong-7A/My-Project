@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game | Phong 7A</title>
+    <link rel="stylesheet" href="2048.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/2048/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/2048/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/2048/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/2048/site.webmanifest">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="nav-brand" href="../index.html">phong 7A</a>
+        <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../contac/contac.html">Contact</a></li>
+            <li><a href="../project/project.html">Other Projects</a></li>
+        </ul>
+    </nav>
+
+    <section class="main-section">
+        <div class="main-container">
+            <h1 class="main-header">2048 Game</h1>
+            <div class="game-container">
+                <div class="score-container">
+                    <div id="score" class="result">Score: 0</div>
+                    <div id="high-score" class="result">High Score: 0</div>
+                </div>
+                <div id="game-board" class="game-board"></div>
+                <button onclick="startGame()" class="action-btn restart-btn">Restart</button>
+                <div id="game-over-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <h2 class="modal-title">Game Over</h2>
+                        <p>Final Score: <span id="final-score">0</span></p>
+                        <p>High Score: <span id="modal-high-score">0</span></p>
+                        <button onclick="startGame()" class="action-btn restart-btn">Play Again</button>
+                    </div>
+                </div>
+                <div id="game-won-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <h2 class="modal-title">You Won!</h2>
+                        <p>Score: <span id="win-score">0</span></p>
+                        <p>High Score: <span id="modal-high-score-won">0</span></p>
+                        <button onclick="startGame()" class="action-btn restart-btn">Play Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="copyright">
+        © 2025 2048 Game. All rights reserved.
+    </footer>
+
+    <script src="2048.js"></script>
+</body>
+</html>
