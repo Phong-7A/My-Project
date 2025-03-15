@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Phong 7A</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="project.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/project/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/project/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/project/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/project/site.webmanifest">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="nav-brand" href="../index.html">phong 7A</a>
+        <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../contac/contac.html">Contact</a></li>
+            <li><a href="../project/project.html" class="active">Other Projects</a></li>
+        </ul>
+    </nav>
+
+    <section class="home-section projects-section">
+        <div class="home-container projects-container">
+            <h1 class="home-header projects-header">MY OTHER PROJECTS</h1>
+            <div class="filter-menu">
+                <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+                <button class="filter-btn" onclick="filterProjects('tools')">Tools</button>
+                <button class="filter-btn" onclick="filterProjects('game')">Game</button>
+            </div>
+            <div class="home-links project-cards">
+                <a href="../calculator/cal.html" class="home-link project-card" data-category="tools">
+                    <img src="../picture/cal.jpg" alt="Calculator">
+                    <h3>Calculator</h3>
+                    <p>Helps You Calculate Simple Calculations</p>
+                    <div class="card-info"></div>
+                </a>
+                <a href="../to do list/to-do.html" class="home-link project-card" data-category="tools">
+                    <img src="../picture/to-do list.jpg" alt="To-Do List">
+                    <h3>To-Do List</h3>
+                    <p>Helps You Take Notes</p>
+                    <div class="card-info"></div>
+                </a>
+                <a href="../Weather App/Weather.html" class="home-link project-card" data-category="tools">
+                    <img src="../picture/weather.jpg" alt="Weather App">
+                    <h3>Weather App</h3>
+                    <p>Weather Forecast By City Name</p>
+                    <div class="card-info"></div>
+                </a>
+                <a href="../qr-gen/qr-gen.html" class="home-link project-card" data-category="tools">
+                    <img src="../picture/qr-gen.jpg" alt="QR Code Generator">
+                    <h3>QR Code Generator</h3>
+                    <p>Help You Create Qr Code</p>
+                    <div class="card-info"></div>
+                </a>
+                <a href="../qr-scan/qr-scan.html" class="home-link project-card" data-category="tools">
+                    <img src="../picture/qr-scan.jpg" alt="QR Code Generator">
+                    <h3>QR Code Scanner</h3>
+                    <p>Help You Scanner Qr Code</p>
+                    <div class="card-info"></div>
+                </a>
+                <a href="../url-short/url-short.html" class="home-link project-card" data-category="tools">
+                    <img src="../picture/short.jpg" alt="QR Code Generator">
+                    <h3>Url Shortener</h3>
+                    <p>Help You Shorten Url</p>
+                    <div class="card-info"></div>
+                </a>
+                <a href="../2048/2048.html" class="home-link project-card" data-category="game">
+                    <img src="../picture/2048.jpg" alt="QR Code Generator">
+                    <h3>2048 Game</h3>
+                    <p>Help You Relax After Stress</p>
+                    <div class="card-info"></div>
+                </a>
+                <a href="../chess/chess.html" class="home-link project-card" data-category="game">
+                    <img src="../picture/chess.jpg" alt="QR Code Generator">
+                    <h3>Chess Game</h3>
+                    <p>Help You Relax After Stress</p>
+                    <div class="card-info"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="copyright">
+        © 2025 Hải Phong 7A. All rights reserved.
+    </footer>
+
+    <script src="project.js"></script>
+    <script>
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            cards.forEach(card => {
+
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

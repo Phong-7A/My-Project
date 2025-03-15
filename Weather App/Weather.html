@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | Phong 7A</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Weather.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/weather/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/weather/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/weather/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/weather/site.webmanifest">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="nav-brand" href="../index.html">phong 7A</a>
+        <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../contac/contac.html">Contact</a></li>
+            <li><a href="../project/project.html">Other Projects</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="weather-section">
+        <div class="weather-container">
+            <h1 class="weather-header">Weather App</h1>
+            <div class="weather-input">
+                <input type="text" id="city" placeholder="Enter city name">
+                <button id="get-weather" class="weather-btn"><i class='bx bx-search'></i> Get Weather</button>
+            </div>
+            <p id="error-message" class="error-message"></p>
+            <div class="weather-display" id="weather-display">
+                <div class="weather-info">
+                    <h2 id="city-name">Hanoi</h2>
+                    <p id="temperature">25°C</p>
+                    <p id="condition">Sunny</p>
+                    <div class="weather-icon"><i class='bx bx-sun'></i></div>
+                </div>
+                <div class="weather-effects" id="weather-effects"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="copyright">
+        © 2025 Hải Phong 7A. All rights reserved.
+    </footer>
+
+    <script src="Weather.js"></script>
+</body>
+</html>

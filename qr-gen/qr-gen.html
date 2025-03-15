@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator | Phong 7A</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="qr-gen.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/qr-gen/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/qr-gen/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/qr-gen/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/qr-gen/site.webmanifest">
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="nav-brand" href="../index.html">phong 7A</a>
+        <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../contac/contac.html">Contact</a></li>
+            <li><a href="../project/project.html" >Other Projects</a></li>
+        </ul>
+    </nav>
+
+    <section class="home-section projects-section">
+        <div class="home-container projects-container">
+            <h1 class="home-header projects-header">QR Code Generator</h1>
+            <div class="qr-container">
+                <input type="text" id="qr-text" placeholder="Enter text or URL to generate QR code" class="qr-input">
+                <button onclick="generateQR()" class="qr-btn">Generate QR Code</button>
+                <div id="qrcode" class="qr-code"></div>
+                <button id="download-btn" onclick="downloadQR()" class="qr-btn download-btn" style="display: none;">Download QR Code</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="copyright">
+        © 2025 Hải Phong 7A. All rights reserved.
+    </footer>
+    <script src="qr-gen.js"></script>
+</body>
+</html>

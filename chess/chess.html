@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chess.css">
+    <link rel="stylesheet" href="css/chessboard-1.0.0.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/chess/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/chess/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/chess/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/chess/site.webmanifest">
+    <title>Chess Game | Phong 7A</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a class="nav-brand" href="../index.html">phong 7A</a>
+        <ul class="nav-menu">
+            <li><a href="../index.html" >Home</a></li>
+            <li><a href="../contac/contac.html">Contact</a></li>
+            <li><a href="../project/project.html">Other Projects</a></li>
+        </ul>
+    </nav>
+
+    <section class="main-section">
+        <div class="main-container">
+            <h1 class="main-header">Chess Game</h1>
+            <div class="game-container">
+                <div class="board" id="board"></div>
+                <div class="buttons">
+                    <button class="action-btn play-again">Play Again</button>
+                    <button class="action-btn set-pos">Set Position</button>
+                    <button class="action-btn flip-board">Flip Board</button>
+                </div>
+                <div id="move-history" class="move-history"></div>
+                <div id="game-over-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <h2 class="modal-title">Game Over</h2>
+                        <p>You Lost!</p>
+                        <button onclick="restartGame()" class="action-btn restart-btn">Play Again</button>
+                    </div>
+                </div>
+                <div id="game-won-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <h2 class="modal-title">You Won!</h2>
+                        <p>Congratulations!</p>
+                        <button onclick="restartGame()" class="action-btn restart-btn">Play Again</button>
+                    </div>
+                </div>
+                <div id="set-position-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <h2 class="modal-title">Set Position</h2>
+                        <p>Enter FEN notation:</p>
+                        <input type="text" id="fen-input" class="fen-input" placeholder="e.g., rnbqkbnr/pppppppp/5n2/5p2/5P2/5N2/PPPPPPPP/RNBQKB1R w KQkq - 0 2">
+                        <div class="modal-buttons">
+                            <button onclick="setPosition()" class="action-btn submit-btn">Submit</button>
+                            <button onclick="closeSetPositionModal()" class="action-btn cancel-btn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="copyright">
+        © 2025 Hải Phong 7A. All rights reserved.
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/chessboard-1.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <script src="chess.js"></script>
+</body>
+
+</html>
